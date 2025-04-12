@@ -1,155 +1,748 @@
-
+<!DOCTYPE html>
 <html lang="en">
-  <head><meta http-equiv="content-type" content="text/html;charset=utf-8">
-
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daily Weather News</title>
+    <title>Elegant Silks - Premium Silk Sarees</title>
     <style>
+        /* Global Styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-
+        
         body {
-            background-color: #f5f5f5;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
+            background-color: #f8f4f1;
+            color: #333;
+            line-height: 1.6;
         }
-
+        
         .container {
-            max-width: 600px;
-            width: 100%;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            text-align: center;
-            padding: 30px; /* Increased padding for better spacing */
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
         }
-
+        
+        a {
+            text-decoration: none;
+            color: #8e2de2;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, #8e2de2, #4a00e0);
+            color: white;
+            padding: 20px 0;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
         .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 20px;
+        }
+        
+        .nav-links a {
+            color: white;
+            font-weight: 500;
+        }
+        
+        /* Main Product Section */
+        .product-section {
+            padding: 40px 0;
+        }
+        
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        .product-gallery {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .main-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+        }
+        
+        .thumbnail-container {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .thumbnail {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 4px;
+            cursor: pointer;
+            border: 1px solid #ddd;
+        }
+        
+        .product-info {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .product-title {
+            font-size: 28px;
+            color: #4a00e0;
+            margin-bottom: 15px;
+        }
+        
+        .price-container {
+            display: flex;
+            align-items: center;
             margin-bottom: 20px;
         }
-
-        .logo img {
-            width: 50px; /* Adjust size as needed */
-            height: auto;
-        }
-
-       
-        h2 {
-            color: #007bff;
-            margin-bottom: 20px; /* Increased spacing below heading */
-        }
-
-        p {
+        
+        .current-price {
+            font-size: 26px;
+            font-weight: bold;
             color: #333;
-            font-size: 14px;
-            line-height: 1.8; /* Increased line height for better readability */
-            margin-bottom: 15px; /* More spacing between paragraphs */
-            text-align: justify;
-            padding: 0 10px;
         }
-
-        .call-button {
-            display: inline-block;
-            width: 100%;
-            text-align: center;
-            background-color: #007bff;
+        
+        .original-price {
+            font-size: 18px;
+            color: #999;
+            text-decoration: line-through;
+            margin-left: 10px;
+        }
+        
+        .discount {
+            margin-left: 10px;
+            background-color: #e94560;
             color: white;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        
+        .offers-box {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .offers-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #4a00e0;
+        }
+        
+        .offer-item {
+            display: flex;
+            margin-bottom: 8px;
+        }
+        
+        .offer-item i {
+            color: #4a00e0;
+            margin-right: 10px;
+        }
+        
+        .cta-button {
+            background: linear-gradient(135deg, #8e2de2, #4a00e0);
+            color: white;
+            border: none;
+            padding: 12px 30px;
             font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: transform 0.3s;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+        }
+        
+        /* Product Details */
+        .product-details {
+            margin-top: 40px;
+        }
+        
+        .tab-container {
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            margin-bottom: 20px;
+        }
+        
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+        }
+        
+        .tab.active {
+            border-bottom: 2px solid #4a00e0;
+            color: #4a00e0;
+            font-weight: 600;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .product-description p {
+            margin-bottom: 15px;
+        }
+        
+        /* Customer Ratings */
+        .ratings-section {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 40px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .ratings-title {
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: #4a00e0;
+        }
+        
+        .overall-rating {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .rating-number {
+            font-size: 48px;
             font-weight: bold;
-            padding: 15px 0; /* Adjusted padding */
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 20px; /* Added space above button */
+            margin-right: 20px;
         }
-
-        .call-button:hover {
-            background-color: #0056b3;
+        
+        .stars {
+            color: #ffb100;
+            font-size: 20px;
         }
-
-        .footer {
-            background-color: #007bff;
-            color: white;
-            text-align: center;
-            padding: 15px; /* Increased padding for better spacing */
+        
+        .review-count {
+            color: #666;
+            margin-left: 10px;
+        }
+        
+        .customer-review {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        
+        .reviewer-name {
+            font-weight: bold;
+        }
+        
+        .review-date {
+            color: #999;
             font-size: 14px;
-            margin-top: 25px; /* Added more space above footer */
-            border-radius: 0 0 8px 8px;
         }
-
-        .footer a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
+        
+        /* Disclaimer Box */
+        .disclaimer-box {
+            background-color: #f1f1f1;
+            border-left: 4px solid #4a00e0;
+            padding: 15px;
+            margin: 30px 0;
+            font-size: 14px;
+            color: #666;
         }
-
-        .footer a:hover {
-            text-decoration: underline;
+        
+        /* Footer */
+        footer {
+            background-color: #2b2b2b;
+            color: white;
+            padding: 40px 0 20px;
+        }
+        
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+        }
+        
+        .footer-column {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .footer-title {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #d9a7ff;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #bbb;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .contact-info div {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-info i {
+            margin-right: 10px;
+            color: #d9a7ff;
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            font-size: 14px;
+            color: #999;
+        }
+        
+        /* Policy Pages */
+        .policy-section {
+            padding: 60px 0;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .policy-title {
+            font-size: 28px;
+            color: #4a00e0;
+            margin-bottom: 30px;
+        }
+        
+        .policy-content h2 {
+            font-size: 22px;
+            margin: 25px 0 15px;
+            color: #555;
+        }
+        
+        .policy-content p {
+            margin-bottom: 15px;
+        }
+        
+        .policy-content ul {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .policy-content li {
+            margin-bottom: 8px;
         }
     </style>
-    <script src="js/render.6a98e0a4cecd7130212c.js" async=""></script>
 </head>
 <body>
-  <div class="container">
-    <!-- Existing content -->
-    
-    <!-- Add a new image -->
-    <img src="A1.jpg" alt="Daily Weather News" style="width: 100%; margin: 10px 0;">
-    
-    <!-- More existing content -->
-</div>
-
-    <div class="container">
-
-        <h2>Daily Weather News</h2>
-      <p>
-      <h1>Record-challenging heat to build over Southwest, including over 100 F in Phoenix</h1>
-
-        <p>
-            Temperatures will throttle up over the southwestern United States into this weekend with some of the highest temperatures of the year so far for many areas across the interior, DailyWeatherNews meteorologists say. The string of hot, dry days will boost the spring wildfire risk in the region. 
-Temperatures will run 10-20 degrees Fahrenheit above historical averages at the peak, with records challenged. Factoring in April sunshine, which is equivalent to sunshine in August, DailyWeatherNews RealFeel® Temperatures can spike to 10 degrees or more above the actual temperature during the day. "A strong area of high pressure will bring unusual warmth for this time of year for the rest of this week and this weekend," AccuWeather Senior Meteorologist Heather Zehr said, "The high looks strongest from Wednesday through Friday, then weakens a bit this weekend as it slides eastward."
-        </p>
-
-        <p>
-            Phoenix is likely to experience its first 100 F or higher reading of the year on Thursday," Zehr said, "Friday and Saturday may also top 100.
-
-The average date for the first 100 is May 2 at Phoenix. The earliest date was March 26, 1988.
-
-For outdoor enthusiasts who will be venturing out in the wilderness over the next week or so, be sure to pack plenty of water, as the sun and heat in remote areas can have deadly consequences.
-
-In California, the interior will get very warm, but sea breezes will keep coastal areas relatively cool, and there can be some short-lived fog along and near the coast to start each day.
-        </p>
-
-        <p>
-            The core of the heat will begin to shift farther to the east over the Southwest this weekend.
-"There is a chance an eddy forms just offshore of Southern California, which is a common phenomenon in June," Zehr said.
-
-The counterclockwise circulation around the eddy can direct long-lasting cool, damp air with clouds and drizzle toward Southern California beaches and even to the Interstate 5 corridor. "If that eddy forms, coastal areas could be cloudy, drizzly and chilly for days, just like it often occurs in June," Zehr explained.        </p>
-
-        <a href="tel:+18284232466" class="call-button">Record-challenging heat to build over Southwest, including over 100 F in Phoenix</a>
-
-        <p>
-            For further assistance, visit our help center on the official Daoli Weather News website for additional resources and FAQs.
-        </p>
-
-        <div class="footer">
-            Need help? <a href="tel:+18056611603">Daily Weather News website</a>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Elegant Silks</div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#collection">Collection</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-    </div>
+    </header>
 
+    <!-- Main Product Section -->
+    <section class="product-section">
+        <div class="container">
+            <div class="product-container">
+                <!-- Product Gallery -->
+                <div class="product-gallery">
+                    <img src="/api/placeholder/600/400" alt="Kanchipuram Silk Saree" class="main-image">
+                    <div class="thumbnail-container">
+                        <img src="/api/placeholder/150/150" alt="Saree Front View" class="thumbnail">
+                        <img src="/api/placeholder/150/150" alt="Saree Close-up" class="thumbnail">
+                        <img src="/api/placeholder/150/150" alt="Saree Pattern Detail" class="thumbnail">
+                        <img src="/api/placeholder/150/150" alt="Saree Pallu" class="thumbnail">
+                    </div>
+                </div>
+                
+                <!-- Product Info -->
+                <div class="product-info">
+                    <h1 class="product-title">Royal Kanchipuram Silk Saree - Purple & Gold</h1>
+                    
+                    <div class="price-container">
+                        <span class="current-price">₹12,999</span>
+                        <span class="original-price">₹19,999</span>
+                        <span class="discount">35% OFF</span>
+                    </div>
+                    
+                    <div class="offers-box">
+                        <h3 class="offers-title">Special Offers</h3>
+                        <div class="offer-item">
+                            <i>🎁</i>
+                            <span>Use code SILKFEST for an additional 10% off</span>
+                        </div>
+                        <div class="offer-item">
+                            <i>🚚</i>
+                            <span>Free shipping on orders above ₹5,000</span>
+                        </div>
+                        <div class="offer-item">
+                            <i>💰</i>
+                            <span>Buy 2 get 1 free matching blouse piece</span>
+                        </div>
+                        <div class="offer-item">
+                            <i>💳</i>
+                            <span>No-cost EMI available on all major credit cards</span>
+                        </div>
+                    </div>
+                    
+                    <button class="cta-button">Add to Cart</button>
+                    
+                    <!-- Product Details Tabs -->
+                    <div class="product-details">
+                        <div class="tab-container">
+                            <div class="tab active" data-tab="description">Description</div>
+                            <div class="tab" data-tab="specifications">Specifications</div>
+                            <div class="tab" data-tab="care">Care Instructions</div>
+                        </div>
+                        
+                        <div id="description" class="tab-content active product-description">
+                            <p>Experience the timeless elegance of our Royal Kanchipuram Silk Saree in a stunning combination of rich purple and gold zari work. This masterpiece is woven by skilled artisans from Tamil Nadu, showcasing intricate traditional motifs that tell stories of our rich cultural heritage.</p>
+                            
+                            <p>The saree features a grand pallu adorned with temple designs and peacock motifs meticulously crafted with pure gold zari. The contrasting border adds dimension to this regal piece, making it perfect for weddings, festivals, and special occasions.</p>
+                            
+                            <p>Each Kanchipuram silk saree is a testament to India's rich weaving tradition, taking over 15 days to create by hand. The silk used is of the highest quality, ensuring the saree not only looks luxurious but also stands the test of time, becoming a cherished heirloom to pass down through generations.</p>
+                        </div>
+                        
+                        <div id="specifications" class="tab-content">
+                            <ul>
+                                <li><strong>Material:</strong> Pure Kanchipuram Silk</li>
+                                <li><strong>Length:</strong> 6.3 meters (standard saree length)</li>
+                                <li><strong>Color:</strong> Purple with Gold Zari work</li>
+                                <li><strong>Border:</strong> Wide Zari border (4 inches)</li>
+                                <li><strong>Blouse Piece:</strong> Included (0.8 meters)</li>
+                                <li><strong>Zari Type:</strong> Pure Gold Zari (tested)</li>
+                                <li><strong>Weave:</strong> Handloom</li>
+                                <li><strong>Occasion:</strong> Wedding, Festival, Ceremony</li>
+                                <li><strong>Region:</strong> Kanchipuram, Tamil Nadu</li>
+                                <li><strong>Certification:</strong> Silk Mark Certified</li>
+                            </ul>
+                        </div>
+                        
+                        <div id="care" class="tab-content">
+                            <h3>Care Instructions for Your Silk Saree</h3>
+                            <ul>
+                                <li>Dry clean only - recommended for the first time</li>
+                                <li>If hand washing, use cold water and mild detergent</li>
+                                <li>Do not soak for extended periods</li>
+                                <li>Avoid direct sunlight when drying</li>
+                                <li>Iron on low heat with a cloth in between</li>
+                                <li>Store in a cotton cloth, away from moisture</li>
+                                <li>Use naphthalene balls to prevent insect damage</li>
+                                <li>Refold your saree periodically to avoid permanent creases</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Customer Ratings -->
+            <div class="ratings-section">
+                <h2 class="ratings-title">Customer Ratings & Reviews</h2>
+                
+                <div class="overall-rating">
+                    <div class="rating-number">4.8</div>
+                    <div>
+                        <div class="stars">★★★★★</div>
+                        <div class="review-count">Based on 247 reviews</div>
+                    </div>
+                </div>
+                
+                <div class="customer-review">
+                    <div class="review-header">
+                        <div class="reviewer-name">Priya Sharma</div>
+                        <div class="review-date">March 15, 2025</div>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <p>I purchased this saree for my daughter's wedding and was absolutely blown away by the quality and craftsmanship. The purple is so rich and royal, and the gold work is stunning. Worth every penny!</p>
+                </div>
+                
+                <div class="customer-review">
+                    <div class="review-header">
+                        <div class="reviewer-name">Anjali Patel</div>
+                        <div class="review-date">February 28, 2025</div>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <p>This is my third saree from Elegant Silks, and they never disappoint. The silk quality is exceptional, and the zari work is exquisite. I received countless compliments at the event I wore it to!</p>
+                </div>
+                
+                <div class="customer-review">
+                    <div class="review-header">
+                        <div class="reviewer-name">Meera Reddy</div>
+                        <div class="review-date">January 18, 2025</div>
+                    </div>
+                    <div class="review-stars">★★★★☆</div>
+                    <p>Beautiful saree with excellent craftsmanship. The only reason for 4 stars instead of 5 is that the color was slightly different from what I expected - more burgundy than purple. Still gorgeous though!</p>
+                </div>
+            </div>
+            
+            <!-- Product Disclaimer -->
+            <div class="disclaimer-box">
+                <h4>Product Disclaimer</h4>
+                <p>Colors may vary slightly from the images due to different monitor settings and lighting conditions during photography. Each Kanchipuram silk saree is handcrafted, so minor variations in design and pattern are natural and a testament to its authentic handloom nature. The gold zari content has been tested and certified, but natural tarnishing may occur over time with wear and exposure to elements. This is not a defect but a characteristic of real zari work.</p>
+            </div>
+        </div>
+    </section>
     
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-column">
+                <h3 class="footer-title">About Elegant Silks</h3>
+                <p>We are dedicated to preserving India's rich textile heritage by bringing you authentic handcrafted silk sarees directly from the weavers of Kanchipuram, Banaras, and other traditional weaving clusters.</p>
+            </div>
+            
+            <div class="footer-column">
+                <h3 class="footer-title">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#collection">Collection</a></li>
+                    <li><a href="shipping.html">Shipping Policy</a></li>
+                    <li><a href="refund.html">Refund Policy</a></li>
+                    <li><a href="#about">About Us</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column contact-info">
+                <h3 class="footer-title">Contact Us</h3>
+                <div>
+                    <i>📍</i>
+                    <address>
+                        Elegant Silks,<br>
+                        123 Textile Street, Silk Market,<br>
+                        Chennai - 600001, Tamil Nadu, India
+                    </address>
+                </div>
+                <div>
+                    <i>📞</i>
+                    <span>+91 98765 43210</span>
+                </div>
+                <div>
+                    <i>✉️</i>
+                    <a href="mailto:care@elegantsilks.com">care@elegantsilks.com</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container copyright">
+            <p>&copy; 2025 Elegant Silks. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Shipping Policy Page (Hidden by default, linked from footer) -->
+    <section id="shipping-policy" class="policy-section" style="display: none;">
+        <div class="container">
+            <h1 class="policy-title">Shipping Policy</h1>
+            
+            <div class="policy-content">
+                <h2>Domestic Shipping</h2>
+                <p>We are pleased to offer shipping services across all major cities and towns in India. Please note the following details regarding our shipping policy:</p>
+                
+                <ul>
+                    <li><strong>Free Standard Shipping:</strong> All orders above ₹5,000 qualify for free standard shipping within India.</li>
+                    <li><strong>Standard Shipping:</strong> For orders below ₹5,000, a flat shipping fee of ₹250 is applicable.</li>
+                    <li><strong>Express Shipping:</strong> Available at an additional cost of ₹450, ensuring delivery within 2-3 business days.</li>
+                    <li><strong>Processing Time:</strong> Orders are processed within 24 hours of placement (excluding weekends and holidays).</li>
+                    <li><strong>Delivery Timeframe:</strong> Standard shipping typically takes 4-7 business days, depending on your location.</li>
+                </ul>
+                
+                <h2>International Shipping</h2>
+                <p>We ship our exquisite silk sarees worldwide, sharing India's rich textile heritage globally:</p>
+                
+                <ul>
+                    <li><strong>International Standard:</strong> Delivery within 7-14 business days at ₹1,500.</li>
+                    <li><strong>International Express:</strong> Delivery within 3-5 business days at ₹2,500.</li>
+                    <li><strong>Customs & Duties:</strong> Any customs duties or import taxes are the responsibility of the recipient.</li>
+                    <li><strong>Tracking:</strong> All international shipments include tracking information sent to your email.</li>
+                </ul>
+                
+                <h2>Order Tracking</h2>
+                <p>Once your order ships, you will receive an email with your tracking information. You can also log into your account on our website to track your package's journey.</p>
+                
+                <h2>Shipping Restrictions</h2>
+                <p>Please note that we currently cannot ship to P.O. boxes or APO/FPO addresses. If you have any concerns about shipping to your location, please contact our customer service team.</p>
+                
+                <h2>Shipping Delays</h2>
+                <p>While we strive to meet all estimated delivery timeframes, occasionally delays may occur due to customs clearance, weather conditions, or other unforeseen circumstances. We appreciate your understanding in such situations.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Refund Policy Page (Hidden by default, linked from footer) -->
+    <section id="refund-policy" class="policy-section" style="display: none;">
+        <div class="container">
+            <h1 class="policy-title">Return & Refund Policy</h1>
+            
+            <div class="policy-content">
+                <h2>Return Eligibility</h2>
+                <p>We want you to be completely satisfied with your purchase. Our return policy is as follows:</p>
+                
+                <ul>
+                    <li><strong>Time Frame:</strong> Returns are accepted within a 7-day period from the date of delivery.</li>
+                    <li><strong>Condition:</strong> Items must be unworn, unwashed, and in their original condition with all tags attached.</li>
+                    <li><strong>Packaging:</strong> Original packaging must be intact and included with the return.</li>
+                    <li><strong>Non-Returnable Items:</strong> Customized sarees, blouses, or items specifically made to order cannot be returned.</li>
+                </ul>
+                
+                <h2>Return Process</h2>
+                <p>To initiate a return, please follow these steps:</p>
+                
+                <ol>
+                    <li>Contact our customer service team at returns@elegantsilks.com or call +91 98765 43210.</li>
+                    <li>Provide your order number and reason for return.</li>
+                    <li>We will email you a return authorization and shipping instructions.</li>
+                    <li>Pack the item securely in its original packaging.</li>
+                    <li>Ship the item to the address provided in the return instructions.</li>
+                </ol>
+                
+                <h2>Refund Process</h2>
+                <p>Upon receiving and inspecting your return, we will process your refund as follows:</p>
+                
+                <ul>
+                    <li><strong>Refund Method:</strong> Refunds will be issued to the original payment method used for purchase.</li>
+                    <li><strong>Processing Time:</strong> Refunds typically take 7-10 business days to process after we receive and inspect the returned item.</li>
+                    <li><strong>Shipping Costs:</strong> Original shipping charges are non-refundable unless the return is due to our error.</li>
+                    <li><strong>Return Shipping:</strong> The cost of return shipping is the customer's responsibility unless the return is due to our error.</li>
+                </ul>
+                
+                <h2>Exchanges</h2>
+                <p>If you wish to exchange an item for a different color or design:</p>
+                
+                <ul>
+                    <li>Follow the same process as returns.</li>
+                    <li>Clearly mention in your return request that you want an exchange.</li>
+                    <li>Specify the item you would like to receive instead.</li>
+                    <li>If there is a price difference, we will either charge or refund the difference accordingly.</li>
+                </ul>
+                
+                <h2>Damaged or Defective Items</h2>
+                <p>If you receive a damaged or defective item:</p>
+                
+                <ul>
+                    <li>Contact us within 48 hours of receiving the item.</li>
+                    <li>Provide clear photographs of the damage or defect.</li>
+                    <li>We will arrange for return shipping at our expense.</li>
+                    <li>A replacement will be sent or a full refund issued, including original shipping charges.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
     <script>
-
-
-
-
-
-</body></html>
+        // Tab functionality for product details
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs
+                document.querySelectorAll('.tab').forEach(t => {
+                    t.classList.remove('active');
+                });
+                
+                // Add active class to clicked tab
+                tab.classList.add('active');
+                
+                // Hide all tab content
+                document.querySelectorAll('.tab-content').forEach(content => {
+                    content.classList.remove('active');
+                });
+                
+                // Show corresponding tab content
+                const tabId = tab.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+        
+        // Thumbnail image click functionality
+        document.querySelectorAll('.thumbnail').forEach(thumb => {
+            thumb.addEventListener('click', () => {
+                const mainImage = document.querySelector('.main-image');
+                const thumbSrc = thumb.getAttribute('src');
+                const mainSrc = mainImage.getAttribute('src');
+                
+                // Swap images
+                mainImage.setAttribute('src', thumbSrc);
+                thumb.setAttribute('src', mainSrc);
+            });
+        });
+        
+        // Footer policy links
+        document.querySelector('a[href="shipping.html"]').addEventListener('click', (e) => {
+            e.preventDefault();
+            document.querySelector('.product-section').style.display = 'none';
+            document.getElementById('refund-policy').style.display = 'none';
+            document.getElementById('shipping-policy').style.display = 'block';
+            window.scrollTo(0, 0);
+        });
+        
+        document.querySelector('a[href="refund.html"]').addEventListener('click', (e) => {
+            e.preventDefault();
+            document.querySelector('.product-section').style.display = 'none';
+            document.getElementById('shipping-policy').style.display = 'none';
+            document.getElementById('refund-policy').style.display = 'block';
+            window.scrollTo(0, 0);
+        });
+        
+        // Back to home functionality
+        document.querySelector('a[href="#home"]').addEventListener('click', (e) => {
+            e.preventDefault();
+            document.querySelector('.product-section').style.display = 'block';
+            document.getElementById('shipping-policy').style.display = 'none';
+            document.getElementById('refund-policy').style.display = 'none';
+            window.scrollTo(0, 0);
+        });
+    </script>
+</body>
+</html>
